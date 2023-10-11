@@ -11,6 +11,7 @@ class Solution {
             if (str1 + str2 != str2 + str1) {
                 return "";
             }
-            
+            //if strings are equal then return substr from 0 to gcd of sizes
+            return str1.substr(0, std::gcd(str1.size(), str2.size()));
         }
 };
