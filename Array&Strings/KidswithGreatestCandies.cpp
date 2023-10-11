@@ -14,6 +14,11 @@ public:
         }
         // For each kid, check if they will have greatest number of candies
         // among all the kids.
-        
+        vector<bool> result;
+        for (int candy : candies) {
+            result.push_back(candy + extraCandies >= maxCandies);
+        }
+
+        return result;
     }
 };
