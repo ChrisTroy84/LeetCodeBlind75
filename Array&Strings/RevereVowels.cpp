@@ -29,4 +29,12 @@ public:
             while (right >= 0 && !isVowel(s[right])) {
                 right--;
             }
-            
+            //swap if left is l of right:
+            if (left < right) {
+                swap(s[left++], s[right--]);
+            }
+        }
+        return s;
+    }
+    //time and space comp. = O(n)
+};
