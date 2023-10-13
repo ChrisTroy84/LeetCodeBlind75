@@ -18,4 +18,17 @@ public:
             if (i < size && j > 0) {
                 s[j++] = ' ';
             }
-            
+            int start = j;
+            while (i < size && s[i] != ' ') {
+                s[j++] = s[i++];
+            }
+            //reverse words
+            reverse(s.begin() + start, s.begin() + j);
+        }
+        s.resize(j);
+        //reverse entire string
+        reverse(s.begin(), s.end());
+        return s;
+    }
+    //O(n) time complexity, O(1) space
+};
