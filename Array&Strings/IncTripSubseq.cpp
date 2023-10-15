@@ -1,8 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
-
+#include <cmath>
 
 
 class Solution {
@@ -20,4 +19,11 @@ public:
                 auto it = lower_bound(result.begin(), result.end(), nums[i]);
                 *it = nums[i];
             }
-            
+            if (result.size() == 3) {
+                return true;
+            }
+        }
+        return false;
+    }
+    //time = O(nlogn), space = O(1)
+};           
